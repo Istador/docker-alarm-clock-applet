@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  app:
+    user: "$UID:$GID"
+    image: registry.gitlab.com/istador/docker-alarm-clock-applet:0.3.4-11
+    environment:
+      DISPLAY                  : $DISPLAY
+      XAUTHORITY               : /tmp/.docker.xauth
+      PULSE_SERVER             : /run/user/0/pulse/native
+      DBUS_SESSION_BUS_ADDRESS : $DBUS_SESSION_BUS_ADDRESS
+    volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - /tmp/.docker.xauth:/tmp/.docker.xauth:rw
+    - /run/user/$UID/pulse:/run/user/0/pulse
+    - "$DBUS:$DBUS"
