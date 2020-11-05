@@ -23,4 +23,4 @@ If you don't want to use `docker`, but want to install and build it on your own,
 
 There you can see how I build and install the applet on Debian 10 and which packages it requires for building and running it.
 
-I also generate some `*.deb` files that might work on your Debian or Ubuntu system directly. I haven't tested them yet.
+I also generate some `*.deb` files that might work on your Debian or Ubuntu system directly. I have tested them on Debian 10 and Ubuntu 20.04.
